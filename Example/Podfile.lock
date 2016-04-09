@@ -1,0 +1,14 @@
+PODS:
+  - RBSegmentedControl (0.1.0)
+
+DEPENDENCIES:
+  - RBSegmentedControl (from `../`)
+
+EXTERNAL SOURCES:
+  RBSegmentedControl:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  RBSegmentedControl: 71bd6ea39432445c5b6bda44da316ee5803f5563
+
+COCOAPODS: 0.39.0

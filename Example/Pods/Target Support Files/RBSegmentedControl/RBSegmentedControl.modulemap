@@ -1,0 +1,6 @@
+framework module RBSegmentedControl {
+  umbrella header "RBSegmentedControl-umbrella.h"
+
+  export *
+  module * { export * }
+}
