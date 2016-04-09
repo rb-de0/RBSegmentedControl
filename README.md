@@ -4,9 +4,7 @@
 [![License](https://img.shields.io/cocoapods/l/RBSegmentedControl.svg?style=flat)](http://cocoapods.org/pods/RBSegmentedControl)
 [![Platform](https://img.shields.io/cocoapods/p/RBSegmentedControl.svg?style=flat)](http://cocoapods.org/pods/RBSegmentedControl)
 
-## Usage
-
-To run the example project, clone the repo, and run `pod install` from the Example directory first.
+**RBSegmentedControl** is SubClass of UIView that you can customize the colors. It supppots AutoLayout. So, you can use this on the UIStoryBoards.
 
 ## Requirements
 
@@ -25,6 +23,41 @@ use_frameworks!
 
 pod 'RBSegmentedControl'
 ```
+
+## Usage
+
+To run the example project, clone the repo, and run `pod install` from the Example directory first.
+
+Sample of simple handling.
+
+```swift
+class ViewController: UIViewController, RBSegmentedControlDelegate {
+    @IBOutlet weak var segmentedControl: RBSegmentedControl!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        segmentedControl.addSegments("TITLE1", "TITLE2", "TITLE3")
+        segmentedControl.delegate = self
+    }
+    
+    func rb_segmentedControl(didChangedSelectedIndex index: Int) {
+        print(index)
+    }
+}
+```
+
+### Basic Functions
+
+- addSegments ... Adding segment titles by variable-length arguments.
+- removeSegments ... Removing segments.
+
+### Basic Property of RBSegmentedControl
+
+- selectedSegmentTextColor
+- segmentTextColor
+- selectedSegmentBackgroundColor
+- segmentBackgroundColor
+- borderColor
 
 ## Author
 
