@@ -1,10 +1,12 @@
 # RBSegmentedControl
 
+[![CI Status](http://img.shields.io/travis/taji-taji/TJExtensions.svg?style=flat)](https://travis-ci.org/rb-de0/RBSegmentedControl)
 [![Version](https://img.shields.io/cocoapods/v/RBSegmentedControl.svg?style=flat)](http://cocoapods.org/pods/RBSegmentedControl)
 [![License](https://img.shields.io/cocoapods/l/RBSegmentedControl.svg?style=flat)](http://cocoapods.org/pods/RBSegmentedControl)
 [![Platform](https://img.shields.io/cocoapods/p/RBSegmentedControl.svg?style=flat)](http://cocoapods.org/pods/RBSegmentedControl)
 
-**RBSegmentedControl** is SubClass of UIView that you can customize the colors. It supppots AutoLayout. So, you can use this on the UIStoryBoards.
+
+RBSegmentedControl is a subclass of UIView like UISegmentedControl. You can customize some colors. Also, It supports AutoLayout. So, you can use this on the UIStoryBoards.
 
 ## Requirements
 
