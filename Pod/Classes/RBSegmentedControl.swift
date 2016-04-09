@@ -8,7 +8,7 @@
 
 import UIKit
 
-class RBSegmentedControl: UIView{
+public class RBSegmentedControl: UIView{
     
     private var segmentMap = [String: RBSegment]()
     private var segmentConstrains = [NSLayoutConstraint]()
@@ -17,22 +17,22 @@ class RBSegmentedControl: UIView{
     
     private(set) var selectedSegmentIndex = 0
     
-    weak var delegate: RBSegmentedControlDelegate?
+    public weak var delegate: RBSegmentedControlDelegate?
     
-    var selectedSegmentTextColor = RBSegmentControlConst.DefaultSelectedTextColor
-    var segmentTextColor = RBSegmentControlConst.DefaultTextColor
+    public var selectedSegmentTextColor = RBSegmentControlConst.DefaultSelectedTextColor
+    public var segmentTextColor = RBSegmentControlConst.DefaultTextColor
     
-    var selectedSegmentBackgroundColor = RBSegmentControlConst.DefaultSelectedBackgroundColor
-    var segmentBackgroundColor = RBSegmentControlConst.DefaultBackgroundColor
+    public var selectedSegmentBackgroundColor = RBSegmentControlConst.DefaultSelectedBackgroundColor
+    public var segmentBackgroundColor = RBSegmentControlConst.DefaultBackgroundColor
     
-    var borderColor = RBSegmentControlConst.DefaultBorderColor
+    public var borderColor = RBSegmentControlConst.DefaultBorderColor
     
     override init(frame: CGRect) {
         super.init(frame: frame)
         initView()
     }
     
-    required init?(coder aDecoder: NSCoder) {
+    required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         initView()
     }
@@ -47,7 +47,7 @@ class RBSegmentedControl: UIView{
 
 // MARK: - add/remove
 extension RBSegmentedControl{
-    func addSegments(titles: String...){
+    public func addSegments(titles: String...){
         
         for (index, title) in titles.enumerate(){
             let newSegment = RBSegment(title: title)
@@ -69,7 +69,7 @@ extension RBSegmentedControl{
         updateColors()
     }
     
-    func removeSegments(count: Int){
+    public func removeSegments(count: Int){
         let targetSegments = segmentMap.sort({RBSegmentHelper.compare($0.0, value2: $1.0)}).suffix(count)
         targetSegments.forEach{
             segmentMap.removeValueForKey($0.0)
@@ -88,7 +88,6 @@ extension RBSegmentedControl{
     }
     
     func onTapped(sender: RBSegment){
-        
         for (index, segment) in segmentMap.sort({RBSegmentHelper.compare($0.0, value2: $1.0)}).map({$0.1}).enumerate(){
             if segment == sender && selectedSegmentIndex != index{
                 delegate?.rb_segmentedControl(didChangedSelectedIndex: index)

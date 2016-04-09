@@ -9,6 +9,6 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  RBSegmentedControl: 71bd6ea39432445c5b6bda44da316ee5803f5563
+  RBSegmentedControl: d7b7043f49185d1a3c1cee89accf4484c08191da
 
 COCOAPODS: 0.39.0

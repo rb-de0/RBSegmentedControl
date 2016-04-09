@@ -6,6 +6,6 @@
 //  Copyright © 2016年 rb_de0. All rights reserved.
 //
 
-protocol RBSegmentedControlDelegate: class{
+public protocol RBSegmentedControlDelegate: class{
     func rb_segmentedControl(didChangedSelectedIndex index: Int)
 }

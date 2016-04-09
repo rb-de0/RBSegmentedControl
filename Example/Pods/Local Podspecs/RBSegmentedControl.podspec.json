@@ -1,17 +1,18 @@
 {
   "name": "RBSegmentedControl",
   "version": "0.1.0",
-  "summary": "A short description of RBSegmentedControl.",
-  "description": "",
-  "homepage": "https://github.com/<GITHUB_USERNAME>/RBSegmentedControl",
+  "summary": "A Color Customizable UISegmentedControl",
+  "description": "RBSegmentedControl is SubClass of UIView that you can customize the color .",
+  "homepage": "https://github.com/rb-de0/RBSegmentedControl",
   "license": "MIT",
   "authors": {
     "rb_de0": "rebirth.de0@gmail.com"
   },
   "source": {
-    "git": "https://github.com/<GITHUB_USERNAME>/RBSegmentedControl.git",
+    "git": "https://github.com/rb-de/RBSegmentedControl.git",
     "tag": "0.1.0"
   },
+  "social_media_url": "https://twitter.com/rb_de0",
   "platforms": {
     "ios": "8.0"
   },
@@ -21,5 +22,6 @@
     "RBSegmentedControl": [
       "Pod/Assets/*.png"
     ]
-  }
+  },
+  "frameworks": "UIKit"
 }

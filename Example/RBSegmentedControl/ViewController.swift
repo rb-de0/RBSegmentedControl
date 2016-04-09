@@ -7,18 +7,19 @@
 //
 
 import UIKit
+import RBSegmentedControl
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, RBSegmentedControlDelegate {
+    @IBOutlet weak var segmentedControl: RBSegmentedControl!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        segmentedControl.addSegments("0", "1", "2")
+        segmentedControl.delegate = self
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    func rb_segmentedControl(didChangedSelectedIndex index: Int) {
+        print(index)
     }
-
 }
 
