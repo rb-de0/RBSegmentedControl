@@ -19,13 +19,34 @@ public class RBSegmentedControl: UIView{
     
     public weak var delegate: RBSegmentedControlDelegate?
     
-    public var selectedSegmentTextColor = RBSegmentControlConst.DefaultSelectedTextColor
-    public var segmentTextColor = RBSegmentControlConst.DefaultTextColor
+    public var selectedSegmentTextColor = RBSegmentControlConst.DefaultSelectedTextColor{
+        didSet{
+            updateColors()
+        }
+    }
+    public var segmentTextColor = RBSegmentControlConst.DefaultTextColor{
+        didSet{
+            updateColors()
+        }
+    }
     
-    public var selectedSegmentBackgroundColor = RBSegmentControlConst.DefaultSelectedBackgroundColor
-    public var segmentBackgroundColor = RBSegmentControlConst.DefaultBackgroundColor
+    public var selectedSegmentBackgroundColor = RBSegmentControlConst.DefaultSelectedBackgroundColor{
+        didSet{
+            updateColors()
+        }
+    }
+    public var segmentBackgroundColor = RBSegmentControlConst.DefaultBackgroundColor{
+        didSet{
+            updateColors()
+        }
+    }
     
-    public var borderColor = RBSegmentControlConst.DefaultBorderColor
+    public var borderColor = RBSegmentControlConst.DefaultBorderColor{
+        didSet{
+            self.layer.borderColor = borderColor.CGColor
+            borderMap.forEach{$0.1.backgroundColor = borderColor}
+        }
+    }
     
     override init(frame: CGRect) {
         super.init(frame: frame)
