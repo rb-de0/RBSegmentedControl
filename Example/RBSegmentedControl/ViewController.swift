@@ -9,17 +9,27 @@
 import UIKit
 import RBSegmentedControl
 
-class ViewController: UIViewController, RBSegmentedControlDelegate {
+class ViewController: UIViewController {
     @IBOutlet weak var segmentedControl: RBSegmentedControl!
 
     override func viewDidLoad() {
         super.viewDidLoad()
+            
         segmentedControl.addSegments("0", "1", "2")
         segmentedControl.delegate = self
+        
+        // Customize Colors
+        segmentedControl.borderColor = UIColor.brownColor()
+        segmentedControl.segmentBackgroundColor = UIColor.whiteColor()
+        segmentedControl.selectedSegmentBackgroundColor = UIColor.brownColor()
+        segmentedControl.segmentTextColor = UIColor.brownColor()
+        segmentedControl.selectedSegmentTextColor = UIColor.whiteColor()
     }
-    
+}
+
+// MARK: - RBSegmentedControlDelegate
+extension ViewController: RBSegmentedControlDelegate{
     func rb_segmentedControl(didChangedSelectedIndex index: Int) {
         print(index)
     }
 }
-
