@@ -33,20 +33,33 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 Sample of simple handling.
 
 ```swift
-class ViewController: UIViewController, RBSegmentedControlDelegate {
+class ViewController: UIViewController {
     @IBOutlet weak var segmentedControl: RBSegmentedControl!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        segmentedControl.addSegments("TITLE1", "TITLE2", "TITLE3")
+        segmentedControl.addSegments("0", "1", "2")
         segmentedControl.delegate = self
+        
+         // Customize Colors
+        segmentedControl.borderColor = UIColor.brownColor()
+        segmentedControl.segmentBackgroundColor = UIColor.whiteColor()
+        segmentedControl.selectedSegmentBackgroundColor = UIColor.brownColor()
+        segmentedControl.segmentTextColor = UIColor.brownColor()
+        segmentedControl.selectedSegmentTextColor = UIColor.whiteColor()
     }
-    
+}
+
+// MARK: - RBSegmentedControlDelegate
+extension ViewController: RBSegmentedControlDelegate{
     func rb_segmentedControl(didChangedSelectedIndex index: Int) {
         print(index)
     }
 }
 ```
+
+### Screen Shot
+<img src="RBSegmentedControl_ss.png" width=50%></img>
 
 ### Basic Functions
 
