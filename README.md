@@ -1,5 +1,6 @@
 # RBSegmentedControl
 
+[![Build Status](https://www.bitrise.io/app/e1b3272fa36b8647.svg?token=WTxeq1ueSyv5epqkT_wnTw&branch=master)](https://www.bitrise.io/app/e1b3272fa36b8647)
 [![CI Status](http://img.shields.io/travis/taji-taji/TJExtensions.svg?style=flat)](https://travis-ci.org/rb-de0/RBSegmentedControl)
 [![Version](https://img.shields.io/cocoapods/v/RBSegmentedControl.svg?style=flat)](http://cocoapods.org/pods/RBSegmentedControl)
 [![License](https://img.shields.io/cocoapods/l/RBSegmentedControl.svg?style=flat)](http://cocoapods.org/pods/RBSegmentedControl)
