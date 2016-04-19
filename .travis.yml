@@ -5,9 +5,11 @@ cache: cocoapods
 podfile: Example/Podfile
 
 before_install:
+- sudo easy_install cpp-coveralls
 - gem install cocoapods # Since Travis is not always on latest version
 - pod install --project-directory=Example
 
 script:
-- set -o pipefail && xcodebuild test -workspace Example/RBSegmentedControl.xcworkspace -scheme RBSegmentedControl-Example -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO | xcpretty
+- set -o pipefail && xcodebuild test -workspace Example/RBSegmentedControl.xcworkspace -scheme RBSegmentedControl-Example -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO GCC_INSTRUMENT_PROGRAM_FLOW_ARCS=YES GCC_GENERATE_TEST_COVERAGE_FILES=YES | xcpretty
 - pod lib lint
+- coveralls -e Example/RBSegmentedControl/Tests
