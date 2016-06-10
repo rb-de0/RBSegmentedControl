@@ -6,8 +6,7 @@ podfile: Example/Podfile
 
 before_install:
 - sudo easy_install cpp-coveralls
-- gem install cocoapods # Since Travis is not always on latest version
-- pod --version
+- gem install cocoapods -v 0.39.0 # Since Travis is not always on latest version
 - pod install --project-directory=Example
 
 script:
